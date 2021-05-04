@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_loja_virtual/home/widgets/appbar/app_bar_widget.dart';
+import 'package:ui_loja_virtual/home/widgets/category/category_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,7 +13,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Column(
         children: [
-          appBarWidget(),
+          AppBarWidget(),
+          SizedBox(height: 24),
+          CategoryWidget(),
         ],
       ),
     );
