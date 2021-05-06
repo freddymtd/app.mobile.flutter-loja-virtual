@@ -40,13 +40,16 @@ class _CardItemState extends State<CardItem> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: (size.width - 16) / 2,
-                      height: (size.width - 16) / 2,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(dataItems[index]['img']),
-                            fit: BoxFit.cover),
+                    Hero(
+                      tag: dataItems[index]['id'].toString(),
+                      child: Container(
+                        width: (size.width - 16) / 2,
+                        height: (size.width - 16) / 2,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(dataItems[index]['img']),
+                              fit: BoxFit.cover),
+                        ),
                       ),
                     ),
                     SizedBox(
